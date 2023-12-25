@@ -1,0 +1,44 @@
+server:
+  port: 8888
+spring:
+  security:
+    user:
+      name: username
+      password: password
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          force-pull: true
+          uri: "https://github.com/BorisSpring/BreweryConfig.git"
+      request-connect-timeout: 3000
+      discovery:
+        enabled: true
+        service-id: "cloudconfig"
+  profiles:
+    active: git
+  application:
+    name: "cloudconfig"
+
+management:
+  metrics:
+    tag:
+      application: ${spring.application.name}
+  endpoint:
+    metrics:
+      enabled: true
+    shutdown:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true

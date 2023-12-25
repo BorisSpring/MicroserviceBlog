@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/blogService/pom.xml" />
+        <option value="$PROJECT_DIR$/CloudConfig/pom.xml" />
+        <option value="$PROJECT_DIR$/EurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/slideService/pom.xml" />
+        <option value="$PROJECT_DIR$/gatewayServer/pom.xml" />
+        <option value="$PROJECT_DIR$/commentService/pom.xml" />
+        <option value="$PROJECT_DIR$/messageService/pom.xml" />
+        <option value="$PROJECT_DIR$/authService/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringAuthorizationServer/pom.xml" />
+        <option value="$PROJECT_DIR$/Gayeway-blog/pom.xml" />
+        <option value="$PROJECT_DIR$/KeycloakStorageProvider/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/SpringAuthorizationServer/pom.xml" />
+        <option value="$PROJECT_DIR$/gatewayServer/pom.xml" />
+      </set>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

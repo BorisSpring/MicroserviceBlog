@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/CloudConfig" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/EurekaServer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Gayeway-blog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/KeycloakStorageProvider" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/authService" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blogService" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/commentService" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/messageService" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/slideService" vcs="Git" />
+  </component>
+</project>

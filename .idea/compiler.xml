@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EurekaServer" />
+        <module name="CloudConfig" />
+        <module name="Gayeway-blog" />
+        <module name="KeycloakStorageProvider" />
+      </profile>
+      <profile name="Annotation profile for slideService" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.3.FINAL/mapstruct-processor-1.5.3.FINAL.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.3.Final/mapstruct-1.5.3.Final.jar" />
+        </processorPath>
+        <module name="commentService" />
+        <module name="slideService" />
+        <module name="blogService" />
+        <module name="authService" />
+        <module name="messageService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gatewayServer" target="17" />
+      <module name="SpringAuthorizationServer" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CloudConfig" options="-parameters" />
+      <module name="EurekaServer" options="-parameters" />
+      <module name="Gayeway-blog" options="-parameters" />
+      <module name="KeycloakStorageProvider" options="-parameters" />
+      <module name="SpringAuthorizationServer" options="-parameters" />
+      <module name="authService" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="blogService" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="commentService" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="gatewayServer" options="-parameters" />
+      <module name="messageService" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="slideService" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+    </option>
+  </component>
+</project>

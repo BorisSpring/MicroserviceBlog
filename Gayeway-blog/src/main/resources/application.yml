@@ -1,0 +1,30 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: "gatewayserver-blog"
+  cloud:
+    config:
+      username: username
+      password: password
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+  config:
+    import: optional:configserver:http://localhost:8888/
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:7080/realms/blogrealm
+          jwk-set-uri: "http://localhost:7080/realms/blogrealm/protocol/openid-connect/certs"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://username:password@localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true

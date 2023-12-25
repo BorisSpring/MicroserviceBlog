@@ -1,0 +1,31 @@
+services:
+  authService:
+    container_name: authService
+    image: bokica1234/auth:blog
+    ports:
+      - "8084:8084"
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
+  keycloak-provider:
+    container_name: keycloak-with-provider
+    image: keycloak-blog:blog
+    ports:
+      - "7081:8080"
+    command: ["start-dev"]
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      AUTH_SERVICE_URL: http://authService:8084/
+      AUTHSERVICEURL: http://authService:8084/
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
+volumes:
+  keycloak-volume:
+
+networks:
+  blog:
+    driver: bridge

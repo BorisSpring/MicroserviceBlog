@@ -1,0 +1,49 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: "slides"
+  config:
+    import: "optional:configserver:http://localhost:8888/"
+  cloud:
+    config:
+      username: username
+      password: password
+  profiles:
+    active: default
+
+management:
+  metrics:
+    tag:
+      application: ${spring.application.name}
+  endpoint:
+    metrics:
+      enabled: true
+    shutdown:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+
+
+upload:
+  dir: slideService/src/main/resources
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://username:password@localhost:8761/eureka/
+    enabled: true
+  instance:
+    prefer-ip-address: true
